@@ -1,0 +1,142 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@500;700;800&display=swap");
+body {
+  margin: 0 auto;
+  font-family: "Open Sans", sans-serif;
+  background: #fbfbfb;
+}
+.section {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.container {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.container.half {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.container.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.container.half > div {
+  width: 50%;
+}
+.container > .title {
+  width: 100% !important;
+  flex-shrink: 0;
+  color: #0077ee;
+  font-size: 30px;
+  font-weight: 700;
+}
+.section.product .container {
+  height: 400px;
+}
+.product .name {
+  font-weight: 800;
+  font-size: 40px;
+  color: #e3307a;
+}
+.product .tagline {
+  margin-bottom: 10px;
+  color: #444;
+}
+.product .price {
+  margin-bottom: 10px;
+  font-weight: 700;
+  font-size: 23px;
+  display: flex;
+  gap: 10px;
+}
+.product .price .regular {
+  color: red;
+  text-decoration: line-through;
+}
+.product .details {
+  position: relative;
+  left: 2000px;
+  opacity: 0;
+  animation: in 1.5s forwards;
+}
+.product .image {
+  padding: 30px;
+  box-sizing: border-box;
+  position: relative;
+  left: -2000px;
+  opacity: 0;
+  animation: in 1.5s forwards;
+}
+.product .image img {
+  width: auto;
+  height: auto;
+  max-height: 400px;
+  float: right;
+  margin-right: 50px;
+  background: white;
+  border-radius: 30px;
+  box-shadow: 3px 3px 8px -7px;
+}
+.product .variant {
+  display: flex;
+  gap: 5px;
+  flex-wrap: wrap;
+}
+.product .variant .title {
+  width: 100%;
+  font-size: 13px;
+  margin-bottom: 5px;
+}
+.product .variant input {
+  display: none;
+}
+.product .variant label {
+  cursor: pointer;
+  background: rgba(0, 0, 0, 0.02);
+  border-radius: 100px;
+  padding: 5px 10px;
+  font-size: 13px;
+  user-select: none;
+}
+.product .variant label:hover {
+  background: rgba(0, 0, 0, 0.04);
+}
+.product .variant input:checked + label {
+  color: #ee0093;
+  background: rgba(0, 0, 0, 0.08);
+}
+a.button {
+  display: block;
+  width: 200px;
+  height: 40px;
+  line-height: 40px;
+  text-decoration: none;
+  text-align: center;
+  color: #fff;
+  background: #f574e4;
+  margin: 20px 0px;
+  border-radius: 100px;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 700;
+}
+a.button:hover {
+  background: #e3307a;
+}
+@keyframes in {
+  50% {
+    opacity: 0;
+  }
+  100% {
+    left: 0;
+    right: 0;
+    opacity: 1;
+  }
+}
